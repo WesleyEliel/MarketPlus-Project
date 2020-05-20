@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load checkout_tags %} {% block stylesheets %} {% endblock %} {% block content %}
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        <h1>Checkout</h1>
+    </h2>
+</section>
+<!-- Block for both login and register -->
+<section class="login_area p_100">
+    <div class="container">
+        <div class="login_inner">
+            <div class="row">
+                {% include 'accounts/login.html' %} {% include 'accounts/register.html' %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End block -->
+{% endblock %} {% block %} {% endblock %}
+<!--================End login Area =================-->

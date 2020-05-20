@@ -1,0 +1,15 @@
+{% load static %}
+<div>
+    <h3>Find by Image </h3> <br>
+    <form id="search" class=" custom-file p-l-15 flex-w" action="{% url 'search_results' %}" method="GET">
+
+        {{ form.file_input }}
+        <label class="custom-file-label" for="id_file_input">
+                <h4>Choose File</h4> 
+        </label>
+
+</div>
+
+
+</form>
+</div>

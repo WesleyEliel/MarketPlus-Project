@@ -1,0 +1,281 @@
+{% extends "base.html" %}{% load static %}{% load checkout_tags %} {% load products_filters %} {% block stylesheets %}
+<!--====================================Liens concernant la partie collapse de aroma=======================================-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/aroma/themify-icons/themify-icons.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/aroma/linericon/style.css'%}">
+<link rel="stylesheet" type="text/css" href=" {% static 'css/aroma/nice-select/nice-select.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/aroma/style.css' %}">
+<!--=====================================================================================================-->
+
+{% endblock %} {% block content %}
+<!--================End Categories Banner Area =================-->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        <h2>Identification</h2>
+    </h2>
+</section>
+
+<section class="product_description_area">
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link bg1" id="guest-account-tab" data-toggle="tab" href="#guest-account" role="tab" aria-controls="guest-account" aria-selected="true">CHECK AS A GUEST</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bg1" id="login-account-tab" data-toggle="tab" href="#login-account" role="tab" aria-controls="login-account" aria-selected="false">ALREADY HAVE AN ACCOUNT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bg1" id="create-account-tab" data-toggle="tab" href="#create-account" role="tab" aria-controls="create-account" aria-selected="false">CREATE AN ACCOUNT</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="guest-account" role="tabpanel" aria-labelledby="home-tab">
+                <section class="checkout_method_area p_100">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="checkout_main_area">
+                                <div class="checkout_prosses">
+                                    <div class="row m0">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6 align-items-center">
+                                            <div class="col align-self-center" style="text-align: center;">
+                                                <h2>
+                                                    <p>
+                                                        You're in a hurry and you don't want to create an account ? You can proceed to the payement without registering this time,
+                                                    </p>
+                                                    <p class="p-t-20">
+                                                        Enter your email address below to continue
+                                                    </p>
+                                                </h2>
+                                            </div>
+                                            <div class="p-t-30">
+                                                <form action="" id="guest-form">
+                                                    <div class="form-group">
+                                                        <label for="single-email" class="text-center"><h4>Email address:</h4></label>
+                                                        <input class="form-control" type="email" name="e-mail " id="single-email ">
+                                                        <small id="emailHelp " class="form-text text-muted ">We'll never share your email with anyone else.</small>
+                                                    </div>
+                                                    <input type="hidden" name="guest-form " value='guest-form'>
+                                                    <div style='text-align: center;'>
+                                                        <button class="text-center stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 " form="guest-email ">Continuer</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade " id="login-account" role="tabpanel " aria-labelledby="profile-tab ">
+                <section class="checkout_method_area p_100 ">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="checkout_main_area ">
+                                <div class="checkout_prosses ">
+                                    <div class="row m0 ">
+
+                                        <div class="col-md-6 ">
+                                            <div class="row checkout_from_area ">
+                                                <h2>already registed ?</h2>
+                                                <p>Please log in below :</p>
+                                                <div class="form-group ">
+                                                    {% if form.errors %}
+                                                    <ul class="errorlist ">
+                                                        <li>You entered an invalid username or password.</li>
+                                                    </ul>
+                                                    <br /> {% endif %}
+                                                </div>
+
+                                                <form class="login_form row " method="post " action="{% url 'login' %} ">
+                                                    {% csrf_token %}
+
+                                                    <div class="col-lg-12 form-group ">
+                                                        <div>
+                                                            Username :
+                                                        </div>
+                                                        {% form_table_row login_form.username|addcss:"form-control " %}
+
+                                                    </div>
+
+                                                    <div class="col-lg-12 form-group ">
+                                                        <div>
+                                                            Password:
+                                                        </div>
+                                                        {% form_table_row login_form.password|addcss:"form-control " %}
+                                                    </div>
+
+                                                    <input type="hidden" value="login_form ">
+                                                    <div class="row col-lg-12 " style="display: inline ">
+                                                        <div class="col-lg-6 ">
+                                                            <input type="checkbox" id="f-option" name="selector " style="display: inline-block ">
+                                                            <label for="f-option" style="display: inline-block ">Keep me logged in</label>
+                                                        </div>
+                                                        <div class="col-lg-6 ">
+                                                            <a href="{% url 'password_reset' %} ">
+                                                                <h6>Forgot your password ?</h6>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12" style="margin-top: 20px ">
+                                                        <input class="text-center flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 " type="submit" value="Login " />
+                                                    </div>
+                                                    <input type="hidden" name="next" value="{{ next }}" />
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade " id="create-account" role="tabpanel " aria-labelledby="contact-tab ">
+                <section class="checkout_method_area p_100 ">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="checkout_main_area ">
+                                <div class="checkout_prosses ">
+                                    <div class="row m0 ">
+                                        <div class="col-md-6 ">
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <div class="login_title ">
+                                                <h2 style="text-align: center ">create account</h2>
+                                                <p style="text-align: center; margin-bottom: 1cm ">Follow the steps below to create email account enjoy the great mail.com emailing experience.</p>
+                                            </div>
+                                            <form method="POST " class="login_form row " action="{% url 'registration_url' %} ">
+                                                {% csrf_token %}
+
+                                                <div class="col-lg-10 ">
+                                                    {% form_table_row register_form.username %}
+                                                </div>
+                                                <div class="col-lg-10 ">
+                                                    {% form_table_row register_form.email %}
+                                                </div>
+                                                <div class="col-lg-10 ">
+                                                    {% form_table_row register_form.last_name %}
+                                                </div>
+                                                <div class="col-lg-10 ">
+                                                    {% form_table_row register_form.first_name %}
+                                                </div>
+                                                <div class="col-lg-10 form-group ">
+                                                    {% form_table_row register_form.password1 %}
+                                                </div>
+                                                <div class="col-lg-10 form-group ">
+                                                    {% form_table_row register_form.password2 %}
+                                                </div>
+                                                <input type="hidden" value="register_form ">
+                                                <div class=" offset-4 d-flex justify-content-center align-self-center ">
+                                                    <input type="submit" value="Register Now " class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 border border-white " />
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--================End Categories Banner Area =================-->
+{% endblock %} {% block scripts %}
+<!--====================================Scripts concernant la parti collapse de aroma=======================================-->
+<script src="{% static 'vendors/aroma/skrollr.min.js' %} "></script>
+<script src="{% static 'vendors/aroma/nice-select/jquery.nice-select.min.js'%} "></script>
+<script src="{% static 'vendors/aroma/jquery.ajaxchimp.min.js' %} "></script>
+<script src="{% static 'vendors/aroma/mail-script.js' %} "></script>
+<script src="{% static 'js/aroma/main.js' %} "></script>
+<!--=====================================================================================================-->
+<script>
+    function checkPasswordStrength() {
+        var number = /([0-9])/;
+        var alphabets = /([a-zA-Z])/;
+        var special_chars = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?, <,>])/;
+        var form_username = $('#id_username').val();
+        var form_last_name = $('#id_last_name').val();
+        var form_first_name = $('#id_first_name').val();
+    }
+    $(document).ready(function() {
+        $('#').focusout(function() {
+            $.ajax({
+                type = 'POST',
+                url = $(this).parent().attr('action'),
+                data = {
+                    csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                    username: $(this).val()
+                },
+                success: function(data) {
+
+                },
+                error: function(errordata) {
+
+                },
+
+            });
+        });
+        $('#').focusout(function() {
+            $.ajax({
+                type = 'POST',
+                url = $(this).parent().attr('action'),
+                data = {
+                    csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                    email: $(this).val()
+                },
+                success: function(data) {
+
+                },
+                error: function(errordata) {
+
+                },
+
+            });
+        });
+        $('#').focusout(function() {
+            $.ajax({
+                type = 'POST',
+                url = $(this).parent().attr('action'),
+                data = {
+                    csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                    password: $(this).val()
+                },
+                success: function(data) {
+
+                },
+                error: function(errordata) {
+
+                },
+
+            });
+        });
+        $('#').focusout(function() {
+            $.ajax({
+                type = 'POST',
+                url = $(this).parent().attr('action'),
+                data = {
+                    csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                    re_password: $(this).val()
+                },
+                success: function(data) {
+
+                },
+                error: function(errordata) {
+
+                }
+            });
+        });
+
+    });
+</script>
+
+{% endblock %}

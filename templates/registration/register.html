@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% load products_filters %} {% load checkout_tags %} {% block stylesheets %} {% endblock %} {% block content %}
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        <h1>Register on our site</h1>
+    </h2>
+</section>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 row align-items-center rounded cl0 bg1">
+            <div class="row">
+                <div class="col-8 offset-3 p-b-30">
+                    <h3>Already have an account ?</h3>
+                </div>
+                <div class="col-lg-10 col-sm-12 offset-1" style="text-align: center;">
+                    <p style="color: white;">Login to follow us, track your orders, get fidelity cou codes etc..</p>
+                </div>
+                <div class="p-t-25 col-lg-4 offset-4 ">
+                    <a class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 border border-white " href="register.html ">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="offset-1">
+                <div class="login_title">
+                    <h2 style="text-align: center">create account</h2>
+                    <p style="text-align: center; margin-bottom: 1cm">Follow the steps below to create email account enjoy the great mail.com emailing experience.</p>
+                </div>
+                <form method="POST" class="login_form row" action="{% url 'registration_url' %}">
+                    {% csrf_token %}
+
+                    <div class="col-lg-10">
+                        {% form_table_row form.username %}
+                    </div>
+                    <div class="col-lg-10">
+                        {% form_table_row form.email %}
+                    </div>
+                    <div class="col-lg-10">
+                        {% form_table_row form.last_name %}
+                    </div>
+                    <div class="col-lg-10">
+                        {% form_table_row form.first_name %}
+                    </div>
+                    <div class="col-lg-10 form-group">
+                        {% form_table_row form.password1 %}
+                    </div>
+                    <div class="col-lg-10 form-group">
+                        {% form_table_row form.password2 %}
+                    </div>
+                    <div class=" offset-4 d-flex justify-content-center align-self-center">
+                        <input type="submit" value="Register Now" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 border border-white" />
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div style="margin-bottom: 3cm">
+
+</div>
+{% endblock %}

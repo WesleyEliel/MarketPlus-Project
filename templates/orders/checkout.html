@@ -1,0 +1,169 @@
+{% extends "another_base.html" %} {% load static %} {% load checkout_tags %} {% block stylesheets %}
+<!--====================================Liens concernant la partie collapse de aroma=======================================-->
+<link rel="stylesheet" href="{% static 'vendors/aroma/bootstrap/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/fontawesome/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/themify-icons/themify-icons.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/linericon/style.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/owl-carousel/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/owl-carousel/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/nice-select/nice-select.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/aroma/nouislider/nouislider.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/aroma/style.css' %}">
+<!--=====================================================================================================-->
+
+{% endblock %} {% block content %}
+
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        <h1>Checkout</h1>
+    </h2>
+</section>
+<!--================Checkout Area =================-->
+<section class="checkout_area section-margin--small">
+    <div class="container">
+        <div class="returning_customer">
+            <div class="check_title" style="text-align: center;">
+                <p>
+                    <h2>
+                        If you have shopped with us before, please enter your details in the boxes below.
+                    </h2>
+                    <h2>
+                        If you are a new customer, please proceed to the Billing & Shipping section.
+                    </h2>
+                </p>
+            </div>
+
+        </div>
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Billing Details</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="first" name="name">
+                            <span class="placeholder" data-placeholder="First name"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="last" name="name">
+                            <span class="placeholder" data-placeholder="Last name"></span>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="number" name="number">
+                            <span class="placeholder" data-placeholder="Phone number"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="email" name="compemailany">
+                            <span class="placeholder" data-placeholder="Email Address"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select">
+                                <option value="1">Country</option>
+                                <option value="2">Country</option>
+                                <option value="4">Country</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="add1" name="add1">
+                            <span class="placeholder" data-placeholder="Address line 01"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="add2" name="add2">
+                            <span class="placeholder" data-placeholder="Address line 02"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="city" name="city">
+                            <span class="placeholder" data-placeholder="Town/City"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select">
+                                <option value="1">District</option>
+                                <option value="2">District</option>
+                                <option value="4">District</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
+                        </div>
+                        <div class="col-md-12 form-group mb-0">
+                            <div class="creat_account">
+                                <h3>Shipping Details</h3>
+                                <input type="checkbox" id="f-option3" name="selector">
+                                <label for="f-option3">Ship to a different address?</label>
+                            </div>
+                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Your Order</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <h4>Product <span>Total</span></h4>
+                                </a>
+                            </li>
+                            <li><a href="#">Fresh Blackberry <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                            <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                            <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                        </ul>
+                        <ul class="list list_2">
+                            <li><a href="#">Subtotal <span>$2160.00</span></a></li>
+                            <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
+                            <li><a href="#">Total <span>$2210.00</span></a></li>
+                        </ul>
+                        <div class="payment_item">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option5" name="selector">
+                                <label for="f-option5">Check payments</label>
+                                <div class="check"></div>
+                            </div>
+                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                        </div>
+                        <div class="payment_item active">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option6" name="selector">
+                                <label for="f-option6">Paypal </label>
+                                <img src="img/product/card.jpg" alt="">
+                                <div class="check"></div>
+                            </div>
+                            <p>Pay via PayPal; you can pay with your credit card if you don?t have a PayPal account.
+                            </p>
+                        </div>
+                        <div class="creat_account p-t-20 m-t-20">
+                            <input type="checkbox" id="f-option4" name="selector">
+                            <label for="f-option4">I?ve read and accept the <a href="#">terms & conditions*</a></label>
+
+                        </div>
+                        <div class="text-center">
+                            <a class="button button-paypal" href="#">Proceed to Paypal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="m-b-100">
+
+</div>
+{% endblock %} {% block scripts %}
+<!--====================================Scripts concernant la parti collapse de aroma=======================================-->
+<script src="{% static 'vendors/aroma/skrollr.min.js' %} "></script>
+<script src="{% static 'vendors/aroma/nice-select/jquery.nice-select.min.js'%} "></script>
+<script src="{% static 'vendors/aroma/jquery.ajaxchimp.min.js' %} "></script>
+<script src="{% static 'vendors/aroma/mail-script.js' %} "></script>
+<script src="{% static 'js/aroma/main.js' %} "></script>
+<!--=====================================================================================================-->
+
+<script>
+    $('.gallery-lb').each(function() {
+        // the script to add persuit form class to all django form class
+
+    });
+</script>
+{% endblock %}

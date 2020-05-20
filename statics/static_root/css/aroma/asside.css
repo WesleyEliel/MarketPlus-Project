@@ -1,0 +1,61 @@
+.login_box_area .login_box_img{
+	height:350px;
+	position:relative;
+}
+@media (min-width: 1000px){
+	.login_box_area .login_box_img{
+		height:610px
+	}
+}
+@media (min-width: 991px){
+		.login_box_area .login_box_img{
+			margin-right:-30px
+		}
+}
+.login_box_area .login_box_img img{
+	width:100%
+}
+.login_box_area .login_box_img:before{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	content:"";
+	background:#6c7ae0;
+	opacity:.9
+}
+.login_box_area .login_box_img .hover{
+	position:absolute;
+	top:50%;
+	left:0px;
+	text-align:center;
+	width:100%;
+	transform:translateY(-50%)
+}
+.login_box_area .login_box_img .hover h4{
+	font-size:24px;
+	color:#fff;
+	font-weight:500;
+	margin-bottom:15px
+}
+.login_box_area .login_box_img .hover p{
+	max-width:390px;
+	margin:0px auto 28px;
+	color:#fff
+}
+.login_box_area .login_box_img .hover .primary-btn{
+	border-radius:0px;
+	line-height:38px;
+	text-transform:uppercase
+}
+.login_box_area .login_box_img .hover .primary-btn:hover:before{
+	left:260px
+}
+.login_box_area .login_box_img .button:hover{
+	background:#fff !important;
+	color:#6c7ae0 !important;
+	border-color:#c5322d !important
+}
+
+

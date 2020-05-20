@@ -1,0 +1,343 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ page_title }}{% endblock %}</title>
+    <!--============================================================Line concernant le header ou le projet coza store====================================================-->
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'img/coza_store/icons/favicon.png' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendors/coza_store/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/coza_store/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/coza_store/iconic/css/material-design-iconic-font.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/coza_store/linearicons-v1.0.0/icon-font.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/animsition/css/animsition.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/daterangepicker/daterangepicker.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/slick/slick.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/MagnificPopup/magnific-popup.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/coza_store/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cosa_store/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cosa_store/util.css' %}">
+    <!--===============================================================================================-->
+
+    <!--========================Lien concernant la partie footer, c'est à dire la partie du projet persuit=======================================================================-->
+
+    <link rel="icon" href="{% static 'img/persuit/fav-icon.png' %}" type="image/x-icon" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Icon css link -->
+    <link href="{% static 'css/persuit/font-awesome.min.css' %}" rel="stylesheet">
+    <link href=" {% static 'vendors/persuit/line-icon/css/simple-line-icons.css ' %}" rel="stylesheet">
+    <link href="{% static 'vendors/persuit/elegant-icon/style.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'css/persuit/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Rev slider css -->
+    <link href="{% static 'vendors/persuit/revolution/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/persuit/revolution/css/layers.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/persuit/revolution/css/navigation.css' %}" rel="stylesheet">
+
+    <!-- Extra plugin css -->
+    <link href="{% static 'vendors/persuit/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/persuit/bootstrap-selector/css/bootstrap-select.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/persuit/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/persuit/responsive.css' %}" rel="stylesheet">
+
+    <!--=========================================Lien concernant la ========================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/color_shop/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/color_shop/owl.theme.default.css'%}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/color_shop/animate.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/color_shop/main_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/color_shop/responsive.css' %}">
+    <!--===========================================================================================-->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% block stylesheets %} {% endblock %}
+</head>
+
+<body class="animsition ">
+    {% include 'header.html' %} {% block content %} {% endblock %} {% include 'footer.html' %}
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+    </div>
+    {% block scripts %} {% endblock %}
+
+
+
+
+
+    <!--=======================================Scripts concernant la partie header et le projet liée au projet coza store========================================================-->
+    <script src=" {% static 'vendors/coza_store/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src=" {% static 'vendors/coza_store/animsition/js/animsition.min.js' %} "></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendors/coza_store/bootstrap/js/popper.js' %}"></script>
+    <script src=" {% static 'vendors/coza_store/bootstrap/js/bootstrap.min.js' %} "></script>
+    <!--===============================================================================================-->
+    <script src=" {%  static 'vendors/coza_store/select2/select2.min.js' %} "></script>
+    <script>
+        $(".js-select2").each(function() {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src=" {% static 'vendors/coza_store/daterangepicker/moment.min.js' %} "></script>
+    <script src=" {% static 'vendors/coza_store/daterangepicker/daterangepicker.js' %} "></script>
+    <!--===============================================================================================-->
+    <script src=" {% static 'vendors/coza_store/slick/slick.min.js' %} "></script>
+    <script src=" {% static 'js/coza_store/slick-custom.js' %} "></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendors/coza_store/parallax100/parallax100.js' %}"></script>
+    <script>
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendors/coza_store/MagnificPopup/jquery.magnific-popup.min.js'%}"></script>
+    <script>
+        $('.gallery-lb').each(function() { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: 'a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendors/coza_store/isotope/isotope.pkgd.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendors/coza_store/sweetalert/sweetalert.min.js' %}"></script>
+    <script>
+        $('.js-addwish-b2').on('click', function(e) {
+            e.preventDefault();
+        });
+
+        $('.js-addwish-b2').each(function() {
+            var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to wishlist !", "success");
+
+                $(this).addClass('js-addedwish-b2');
+                $(this).off('click');
+            });
+        });
+
+        $('.js-addwish-detail').each(function() {
+            var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to wishlist !", "success");
+
+                $(this).addClass('js-addedwish-detail');
+                $(this).off('click');
+            });
+        });
+
+        /*---------------------------------------------*/
+
+        $('.js-addcart-detail').each(function() {
+            var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to cart !", "success");
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src=" {% static 'vendors/coza_store/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script>
+        $('.js-pscroll').each(function() {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function() {
+                ps.update();
+            })
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src=" {% static  'js/coza_store/main.js'%}"></script>
+    <!--===============================================================================================-->
+
+
+
+    <!--================================Scripts concernant la partie du projet liees au footer et au projet persuit===============================================================-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'js/persuit/jquery-3.2.1.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/persuit/popper.min.js' %}"></script>
+    <script src="{% static 'js/persuit/bootstrap.min.js' %}"></script>
+    <!-- Rev slider js -->
+    <script src="{% static 'vendors/persuit/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <!-- Extra plugin css -->
+    <script src="{% static 'vendors/persuit/counterup/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/counterup/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/bootstrap-selector/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/image-dropdown/jquery.dd.min.js' %}"></script>
+    <script src="{% static 'js/persuit/smoothscroll.js' %}"></script>
+    <script src="{% static 'vendors/persuit/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/magnify-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vendors/persuit/vertical-slider/js/jQuery.verticalCarousel.js' %}"></script>
+    <script src="{% static 'vendors/persuit/jquery-ui/jquery-ui.js' %}"></script>
+
+    <script src="{% static 'js/persuit/theme.js' %}"></script>
+    <!--===============================================================================================-->
+    <!--=====================================================================================================================-->
+    <script src=" {% static 'js/color_shop/isotope.pkgd.min.js' %} "></script>
+    <script src=" {% static 'js/color_shop/owl.carousel.js' %}"></script>
+    <script src=" {% static 'js/color_shop/easing.js' %}"></script>
+    <script src=" {% static 'js/color_shop/custom.js' %}"></script>
+
+    <!--===============================================================================================-->
+
+    <script>
+        $(document).ready(function() {
+            //Mon horloge
+            function Horloge() {
+                var laDate = new Date();
+                var heure = laDate.getHours();
+                var minutes = laDate.getMinutes();
+                var secondes = laDate.getSeconds();
+                if (heure < 10) {
+                    heure = '0' + heure;
+                }
+                if (minutes < 10) {
+                    minutes = '0' + minutes;
+                }
+                if (secondes < 10) {
+                    secondes = '0' + secondes;
+                }
+                var affiche = heure + ":" + minutes + ":" + secondes;
+                $('.wesley_heure').text(affiche);
+            };
+            setInterval(Horloge, 1000);
+
+            //Search popup when empty or Nothing enter 
+            $('form.search').submit(
+                function() {
+                    text = $('#id_q').val();
+                    if (text == '' || text == 'Search') {
+                        alert('Empty Search, please enter a search term.');
+                        return False;
+                    }
+                }
+            );
+
+            //Add reviews functions for Ajax
+            jQuery("#submit_review").click(addProductReview);
+            jQuery('#submit_anonymous_review').click(addProductAnonymousReview);
+
+            //Adding reveiws from authenticated user, sim
+            function addProductReview() {
+                // build an object of review data to submit
+                var review = {
+                    title: jQuery("#id_title").val(),
+                    content: jQuery("#id_content").val(),
+                    rating: jQuery("#id_rating").val(),
+                    slug: jQuery("#id_slug").val()
+                };
+                // make request, process response
+                jQuery.post("/products/review/add/", review,
+                    function(response) {
+                        jQuery("#review_errors").empty();
+                        // evaluate the "success" parameter
+                        if (response.success == "True") {
+                            // if this is first review, get rid of "no reviews" text
+                            jQuery("#no_reviews").empty();
+                            // add the new review to the reviews section
+                            jQuery("#reviews").prepend(response.html).slideDown();
+                            // get the newly added review and style it with color
+                            new_review = jQuery("#reviews").children(":first");
+                            new_review.addClass('new_review');
+                            // hide the review form
+                            jQuery("#review_form").slideToggle();
+                        } else {
+                            // add the error text to the review_errors div
+                            jQuery("#review_errors").append(response.html);
+                        }
+                    }, "json");
+            };
+
+            function addProductAnonymousReview() {
+                // build an object of review data to submit
+                var review = {
+                    title: jQuery("#id_anonymous_review_title").val(),
+                    content: jQuery("#id_anonymous_review_content").val(),
+                    rating: jQuery("#id_anonymous_review_rating").val(),
+                    slug: jQuery("#id_anonymous_review_slug").val()
+                };
+                // make request, process response
+                jQuery.post("/produtcs/anonymous_review/add/", review,
+                    function(response) {
+                        jQuery("#review_errors").empty();
+                        // evaluate the "success" parameter
+                        if (response.success == "True") {
+                            // disable the submit button to prevent duplicates
+                            jQuery("#submit_review").attr('disabled', 'disabled');
+                            // if this is first review, get rid of "no reviews" text
+                            jQuery("#no_reviews").empty();
+                            // add the new review to the reviews section
+                            jQuery("#reviews").prepend(response.html).slideDown();
+                            // get the newly added review and style it with color
+                            new_review = jQuery("#reviews").children(":first");
+                            new_review.addClass('new_review');
+                            // hide the review form
+                            jQuery("#review_form").slideToggle();
+                        } else {
+                            // add the error text to the review_errors div
+                            jQuery("#review_errors").append(response.html);
+                        }
+                    }, "json");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{% load products_filters %}
+<div class="col-12 p-b-5">
+    <label class="stext-102 cl3" for="{{ form_field.id_for_label }}">
+        {{ form_field.label_tag }}
+        {% if form_field.field.required %}
+            <span>*</span>
+        {% endif %}
+    </label> {% if form_field.errors %}
+    <ul class="errorlist">
+        {% for error in form_field.errors %}
+        <li>
+            {{ form_field.label }}: {{ error }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %} {{ form_field }} {% if form_field.help_text %}
+    <div class='my{{ form_field.id_for_label }}'>
+        {{ form_field.help_text }}
+    </div>
+    {% endif %}
+</div>

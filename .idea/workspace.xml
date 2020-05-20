@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3de21453-806c-486b-87e9-37c1bce266ee" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MarketPlus" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="MarketPlus/invalid/Django" />
+    </ignored-facets>
+  </component>
+  <component name="ProjectId" id="1ZGs9JwmtRc90VFeHHbbotUMDes" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Mon Projet\Projet\MarketPlus\Accounts" />
+      <recent name="G:\Mon Projet\Projet\MarketPlus\statics\static_files\js\color_shop" />
+      <recent name="G:\Mon Projet\Projet\MarketPlus\statics\static_files\css\color_shop" />
+      <recent name="G:\Mon Projet\Projet\MarketPlus\statics\static_files\css" />
+      <recent name="G:\Mon Projet\Projet\MarketPlus\statics\static_files\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="MarketPlus" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MarketPlus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="MarketPlus.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3de21453-806c-486b-87e9-37c1bce266ee" name="Default Changelist" comment="" />
+      <created>1584476613160</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584476613160</updated>
+      <workItem from="1584476617585" duration="2131000" />
+      <workItem from="1584523940894" duration="9889000" />
+      <workItem from="1584536697069" duration="12460000" />
+      <workItem from="1584603085539" duration="8501000" />
+      <workItem from="1584704005357" duration="3529000" />
+      <workItem from="1584715113043" duration="7165000" />
+      <workItem from="1584782896496" duration="11800000" />
+      <workItem from="1584821554691" duration="4245000" />
+      <workItem from="1584862378684" duration="2451000" />
+      <workItem from="1584892425071" duration="492000" />
+      <workItem from="1584962158039" duration="8695000" />
+      <workItem from="1585067444479" duration="12801000" />
+      <workItem from="1585138287378" duration="4639000" />
+      <workItem from="1585156525660" duration="1542000" />
+      <workItem from="1585213036705" duration="1648000" />
+      <workItem from="1585215710288" duration="27493000" />
+      <workItem from="1585319707184" duration="19230000" />
+      <workItem from="1585388589936" duration="2904000" />
+      <workItem from="1585394282879" duration="1901000" />
+      <workItem from="1585516962626" duration="4396000" />
+      <workItem from="1585530186996" duration="1060000" />
+      <workItem from="1585569238388" duration="19967000" />
+      <workItem from="1585998426172" duration="2972000" />
+      <workItem from="1586021127227" duration="27638000" />
+      <workItem from="1586125250132" duration="38273000" />
+      <workItem from="1586372313328" duration="14143000" />
+      <workItem from="1586697784911" duration="66117000" />
+      <workItem from="1586333009505" duration="8224000" />
+      <workItem from="1586353181705" duration="52762000" />
+      <workItem from="1585992735241" duration="289000" />
+      <workItem from="1584697104026" duration="172000" />
+      <workItem from="1584703461960" duration="24000" />
+      <workItem from="1584714484967" duration="42000" />
+      <workItem from="1584714719836" duration="53000" />
+      <workItem from="1584716346109" duration="505000" />
+      <workItem from="1584775615286" duration="595000" />
+      <workItem from="1584807910023" duration="223000" />
+      <workItem from="1585468878087" duration="291000" />
+      <workItem from="1585561092134" duration="341000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586697945490">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1586697945490" />
+    <state x="381" y="0" key="#xdebugger.evaluate" timestamp="1585390510928">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="381" y="0" key="#xdebugger.evaluate/0.0.1366.738@0.0.1366.738" timestamp="1585390510928" />
+    <state x="213" y="18" key="DBNavigator.ProjectSettingsDialog" timestamp="1584718731194">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="213" y="18" key="DBNavigator.ProjectSettingsDialog/0.0.1366.738@0.0.1366.738" timestamp="1584718731194" />
+    <state x="412" y="67" key="FileChooserDialogImpl" timestamp="1585799419522">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="412" y="67" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1585799419522" />
+    <state width="1276" height="460" key="GridCell.Tab.1.bottom" timestamp="1585390516508">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1276" height="460" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1585390516508" />
+    <state width="1276" height="460" key="GridCell.Tab.1.center" timestamp="1585390516508">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1276" height="460" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1585390516508" />
+    <state width="1276" height="460" key="GridCell.Tab.1.left" timestamp="1585390516508">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1276" height="460" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1585390516508" />
+    <state width="1276" height="460" key="GridCell.Tab.1.right" timestamp="1585390516508">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1276" height="460" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1585390516508" />
+    <state width="246" height="590" key="HiddenNamespacesPopup" timestamp="1586002739075">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="246" height="590" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1586002739075" />
+    <state x="83" y="0" key="SettingsEditor" timestamp="1586081865240">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="83" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1586081865240" />
+    <state x="310" y="152" key="com.intellij.ide.util.TipDialog" timestamp="1586353200175">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="310" y="152" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1586353200175" />
+    <state x="334" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586356325006">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="334" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1586356325006" />
+    <state x="0" y="0" width="752" height="738" key="find.popup" timestamp="1584544806809">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" width="752" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1584544806809" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1585604218937">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1585604218937" />
+  </component>
+</project>

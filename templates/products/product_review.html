@@ -1,0 +1,34 @@
+<div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
+</div>
+<!-- Profil image of te user -->
+<img src="images/avatar-01.jpg" alt="AVATAR">
+
+<div class="size-207">
+    <div class="flex-w flex-sb-m p-b-17">
+        <span class="mtext-107 cl2 p-r-20">
+            {% if review.user %}
+            {{ review.user.first_name }} {{ review.user.last_name }} Ariana Grande
+            {% else %}
+            Anonymous User
+            {% endif %}
+        </span>
+
+        <span class="fs-18 cl11">
+                Rating: {{ review.rating }}
+                <i class="zmdi zmdi-star"></i>
+                
+                
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+            </span>
+    </div>
+
+    <p class="stext-102 cl6">
+        <strong>{{ review.title }}</strong>
+        <div class="row">
+            {{ review.content }}
+        </div>
+    </p>
+</div>

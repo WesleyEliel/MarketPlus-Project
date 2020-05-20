@@ -1,0 +1,17 @@
+{% load products_filters %}
+<div class="form-group p-b-20">
+    {% if form_field.errors %}
+    <ul class="errorlist">
+        {% for error in form_field.errors %}
+        <li>
+            {{ form_field.label }}: {{ error }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %} {{ form_field }} {% if form_field.help_text %}
+    <div class='my{{ form_field.id_for_label }}'>
+
+
+    </div>
+    {% endif %}
+</div>

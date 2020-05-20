@@ -1,0 +1,11 @@
+<div>
+    <h3>Find by Keywords.. </h3> <br>
+    <form id="search" class="wrap-search-header flex-w p-l-15" action="{% url 'search_results' %}" method="GET">
+        {{ form.q }}
+        <label for="id_q">
+            <button class="flex-c-m trans-04">
+                <i class="zmdi zmdi-search"></i>
+            </button>
+        </label>
+    </form>
+</div>

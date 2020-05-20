@@ -1,0 +1,146 @@
+{% load static %}
+<div class="row offset-2 col-md-10" >
+    <div class="cart_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cart_title">your shopping cart</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="cart_bar d-flex flex-row align-items-center justify-content-start">
+						<div class="cart_bar_title_name">Product</div>
+						<div class="cart_bar_title_content ml-auto">
+							<div class="cart_bar_title_content_inner d-flex flex-row align-items-center justify-content-end">
+								<div class="cart_bar_title_price">Price</div>
+								<div class="cart_bar_title_quantity">Quantity</div>
+								<div class="cart_bar_title_total">Total</div>
+								<div class="cart_bar_title_button"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="cart_products">
+						<ul>
+                            {% for items in cart.cartitems_set.all %}
+							<li class=" cart_product d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+                                <!-- Product Image -->
+                                {% for images in items.product.images.all %}
+                                    {% if images.featured and not images.thumbnails %}
+                                        <div class="cart_product_image"><img src="/medias/{{ images.image }}" width="50px" height="65px"  alt="{{ items.product.title }}"></div>
+                                    {% endif %}
+                                {% endfor %}
+
+								<!-- Product Name -->
+								<div class="cart_product_name"><a href="{% url 'product_single' items.product.slug %}">{{ items.product.title }}</a></div>
+								<div class="cart_product_info ml-auto">
+									<div class="cart_product_info_inner d-flex flex-row align-items-center justify-content-md-end justify-content-start">
+										<!-- Product Price -->
+										<div class="cart_product_price">FCFA {{ items.product.sale_price }}</div>
+										<!-- Product Quantity -->
+										<div class="product_quantity_container">
+											<div class="product_quantity clearfix">
+												<input id="quantity_input" type="text" pattern="[0-9]*" value="{{ items.quantity }}" name="qty">
+												<div class="quantity_buttons">
+													<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+													<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+												</div>
+											</div>
+										</div>
+										<!-- Products Total Price -->
+										<div class="cart_product_total">FCFA {{ items.line_total }}</div>
+										<!-- Product Cart Trash Button -->
+										<div class="cart_product_button">
+
+                                            <button type="button" class="cart_product_remove" data-toggle="modal" data-target="#remove_item_id"><div><img src="{% static 'img/persuit/icon/close-icon.png' %}"></div></button>
+
+                                            <div class="modal fade" id="remove_item_id" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalCenterTitle">Alert</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div>
+                                                                <div><h4>Do you want to remove</h4></div>
+                                                                <div>
+                                                                    <div>
+                                                                        {% for images in items.product.images.all %}
+                                                                            {% if images.featured and not images.thumbnails %}
+                                                                                <div class="cart_product_image"><img src="/medias/{{ images.image }}" width="50px" height="65px"  alt="{{ items.product.title }}"></div>
+                                                                            {% endif %}
+                                                                        {% endfor %}
+                                                                    </div>
+                                                                    <div>{{ items.product.title }}</div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a class="badge badge-danger" href="{% url 'remove_from_cart' items.product.slug %}" ><h4>Remove</h4></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</li>
+                            {% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="cart_control_bar d-flex flex-md-row flex-column align-items-start justify-content-start">
+                        <a href="{% url 'cart_clear' %}" style="color: white" class="button_clear flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04">clear cart</a>
+                        <a href="{% url 'update_cart' %}" style="color: white" class="button_update flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04">update cart</a>
+                        <a href="{% url 'shop' %}" style="color: white"   class="button_update ml-md-auto flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04">continue shopping</a>
+					</div>
+				</div>
+			</div>
+			<div class="row cart_extra">
+				<!-- Cart Coupon -->
+				<div class="col-lg-6">
+					<div class="cart_coupon">
+						<div class="cart_title">coupon code</div>
+						<form action="#" class="cart_coupon_form d-flex flex-row align-items-start justify-content-start" id="cart_coupon_form">
+							<input type="text" class="cart_coupon_input" placeholder="Coupon code" required="required">
+							<button form="cart_coupon_form" style="color: white" class="stext-101 button_clear cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04">apply coupon</button>
+						</form>
+					</div>
+				</div>
+				<!-- Cart Total -->
+				<div class="col-lg-5 offset-lg-1">
+					<div class="cart_total">
+						<div class="cart_title">cart total</div>
+						<ul>
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div class="cart_total_title">Subtotal</div>
+								<div class="cart_total_price ml-auto">$35.00</div>
+							</li>
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div class="cart_total_title">Shipping</div>
+								<div class="cart_total_price ml-auto">$5.00</div>
+							</li>
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div class="cart_total_title">Total</div>
+								<div class="cart_total_price ml-auto">FCFA {{ cart.total }}</div>
+							</li>
+						</ul>
+
+						<a href="{% url 'checkout' %}" style="color: white"   class="flex-c-m stext-101 cl0 size-101 bg1 hov-btn1 p-lr-15 trans-04">proceed to checkout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
